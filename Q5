@@ -1,0 +1,2 @@
+#clone the remote repo to local
+git clone <git repo address here>
