@@ -8,7 +8,7 @@ files = glob.glob("/Users/soothing/git/my-python-project/*")
 
 
 def check_def(line):
-    m = re.match(r'(^[\s]*def .*$)' , line)
+    m = re.match(r'(^[\s]*def\s.*:)' , line)
     if m:
         return True
     else:
