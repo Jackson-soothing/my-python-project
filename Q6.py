@@ -15,7 +15,7 @@ should be more precise to match those listed in the question
 format_abc = re.findall(r'(\d+/\d+/\d+)', text)
 
 #find format d
-format_d = re.findall(r'(\d+ [a-zA-Z]+ \d+)', text)
+format_d = re.findall(r'(\d{2} [a-zA-Z]{3} \d{4})', text)
 
 #get the total no. of 'date'
 print(len(format_abc) + len(format_d))
