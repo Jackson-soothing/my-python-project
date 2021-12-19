@@ -1,20 +1,17 @@
 #clone the remote repo to local
 git clone <git repo address here>
 
-#change the path
-cd demo-repo
+# b.count the necessary lines, blank, comment and codes
+cloc my-python-project
 
-#count the .py file
+#change the path
+cd my-python-project
+
+# a.count the .py file
 git ls-files "./*.py" | wc -l
 
-#count the lines seperately 
-git ls-files | xargs wc -l
-
-# count the necessary lines, blank, comment and codes
-cloc demo-repo
-
-# compare the changes from current version to HEAD~3
+# d.compare the changes from current version to HEAD~3
 git diff --stat HEAD~3 HEAD
 
-# total folder size and per each of the subfolder
+# e.total folder size and per each of the subfolder
 find . -maxdepth 2 -exec du -hs {} \;
