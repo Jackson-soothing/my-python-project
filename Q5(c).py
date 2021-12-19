@@ -8,8 +8,9 @@ files = glob.glob("/Users/soothing/git/my-python-project/*")
 
 
 def check_def(line):
-    m = re.match(r'(^[\s]*def\s.*:)' , line)
-    if m:
+    
+    match_func = re.match(r'(^\s*def\s.*:)' , line)
+    if match_func:
         return True
     else:
         return False
@@ -18,7 +19,7 @@ def count_functions(file_name):
     
     f = open(file_name, 'r')
     
-    count=0
+    count = 0
     
     for i in f.readlines():
         if check_def(i):
