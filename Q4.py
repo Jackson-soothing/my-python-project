@@ -47,7 +47,7 @@ port_std = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights)))
 def parametric_var_cvar(mean, std, CL):
     
     VAR = norm.ppf(CL/100) * std - mean
-    CVAR = (alpha/100) ** -1 * norm.pdf(norm.ppf(alpha/100))* std - mean
+    CVAR = (100/alpha) * norm.pdf(norm.ppf(alpha/100)) * std - mean
     return VAR, CVAR
 
 results = parametric_var_cvar(port_mean, port_std, CL = 95)
