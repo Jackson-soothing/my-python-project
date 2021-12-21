@@ -3,15 +3,57 @@ git clone <git repo address here>
 
 # b.count the necessary lines, blank, comment and codes
 cloc my-python-project
+'''
+github.com/AlDanial/cloc v 1.90  T=0.01 s (657.1 files/s, 20275.9 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Python                           6             62             52            101
+Markdown                         1              0              0              1
+-------------------------------------------------------------------------------
+SUM:                             7             62             52            102
+-------------------------------------------------------------------------------
+'''
 
 #change the path
 cd my-python-project
 
 # a.count the .py file
 git ls-files "./*.py" | wc -l
+'''
+6
+'''
 
 # d.compare the changes from current version to HEAD~3
 git diff --stat HEAD~3 HEAD
+'''
+Q1.py    | 4 ++--
+ Q4.py    | 2 +-
+ Q5(c).py | 7 ++++---
+ 3 files changed, 7 insertions(+), 6 deletions(-)
+ '''
+
 
 # e.total folder size and per each of the subfolder
 find . -maxdepth 2 -exec du -hs {} \;
+'''
+352K    .
+4.0K    ./Q1.py
+4.0K    ./Q5(c).py
+4.0K    ./Q4.py
+4.0K    ./README.md
+4.0K    ./Q5(a,b,d,e).txt
+4.0K    ./Q3.py
+320K    ./.git
+4.0K    ./.git/config
+224K    ./.git/objects
+4.0K    ./.git/HEAD
+4.0K    ./.git/info
+ 12K    ./.git/logs
+4.0K    ./.git/description
+ 52K    ./.git/hooks
+8.0K    ./.git/refs
+4.0K    ./.git/index
+4.0K    ./.git/packed-refs
+4.0K    ./Q6.py
+'''
