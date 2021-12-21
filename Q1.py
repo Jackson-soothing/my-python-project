@@ -3,7 +3,7 @@ import numpy as np
 
 # replicate the 'Employee' table and store it in excel, next read it
 employee = pd.read_excel('Employee.xlsx').set_index('id')
-employee.manager_id = employee.manager_id.astype(object)
+#employee.manager_id = employee.manager_id.astype(object)
 
 #question a
 
